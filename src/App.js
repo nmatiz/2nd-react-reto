@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-    state = {
+  constructor() {
+    super();
+//si se incluye el constructor, el elemento debe llevar el this para que respete las propiedades del elemento.
+    this.state = {
       value: 0
     }
-    incrementar = () => { 
-      this.setState ({value: this.state.value + 1});
-    }
+  }
+//las funciones adicioneales, siempre va fuera del consutructor, ya que el mismo constructor es una funcion.
+  incrementar = () => { 
+    this.setState ({value: this.state.value + 1});
+  }
   
   render() {
     return (
@@ -19,4 +24,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;  
