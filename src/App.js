@@ -17,7 +17,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/**con el {this.state.value} se llama el valor cargado en el estado */}
         <span className="value">{this.state.value}</span>
+        {/**con el {this.incrementar} se llama la funcion y va cambiando de acuerdo a la accion de la función*/}
         <button id="inc" onClick={this.incrementar}>Incrementa</button>
       </div>
     );
